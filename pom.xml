@@ -17,7 +17,8 @@
 		<gitHubRepo>jenkinsci/leapwork-plugin</gitHubRepo>
 		<!-- Baseline Jenkins version you use to build the plugin. Users must have 
 			this version or newer to run. -->
-		<jenkins.version>2.440.1</jenkins.version>
+		<jenkins.baseline>2.462</jenkins.baseline>
+		<jenkins.version>${jenkins.baseline}.3</jenkins.version>
 	</properties>
 	<name>Leapwork</name>
 	<url>https://github.com/${gitHubRepo}</url>
@@ -27,8 +28,8 @@
 			<dependency>
 				<!-- Pick up common dependencies for the selected LTS line: https://github.com/jenkinsci/bom#usage -->
 				<groupId>io.jenkins.tools.bom</groupId>
-				<artifactId>bom-2.440.x</artifactId>
-				<version>2815.vf5d6f093b_23e</version>
+				<artifactId>bom-${jenkins.baseline}.x</artifactId>
+				<version>4228.v0a_71308d905b_</version>
 				<scope>import</scope>
 				<type>pom</type>
 			</dependency>
